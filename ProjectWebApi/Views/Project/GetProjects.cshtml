@@ -10,6 +10,7 @@
             <th>Краткое наименование</th>
             <th>№ ТЗ проекта</th>
             <th>Статус проекта</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -20,6 +21,10 @@
                 <td>@project.short_name</td>
                 <td># @project.id_ts</td>
                 <td>@project.id_status</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@project.id_project">Изменить</a> |
+                    <a asp-action="Delete" asp-route-id="@project.id_project">Удалить</a>
+                </td>
             </tr>
         }
     </tbody>

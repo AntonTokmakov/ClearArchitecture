@@ -29,6 +29,7 @@ namespace Tasks.Models
             {
                 _projectService.AddProject(project);
                 //return RedirectToAction("Index");
+                return RedirectToAction("GetProjects");
             }
             return View(project);
         }
@@ -37,49 +38,36 @@ namespace Tasks.Models
         {
             return View(_projectService.GetProjects());
         }
-    }
 
-
-    /*public class ProjectController : IProjectController
-    {
-        private readonly IProjectService projectService; 
-
-        public ProjectController(IProjectService projectService) 
+        public IActionResult Edit(int id)
         {
-            this.projectService = projectService;
-        }
+            var project = _projectService.GetProjectById(id);
 
-        public void AddProject(ProjectDto projectDto)
-        {
-            var project = new Project()
+            if (project == null)
             {
-                id_project = projectDto.id_project,
-                project_name = projectDto.project_name,
-                id_ts = projectDto.id_ts,
-                short_name = projectDto.short_name,
-                id_status = projectDto.id_status
-            };
-            projectService.AddProject(project);
+                return NotFound();
+            }
+
+            return View(project);
         }
 
-        public void DeleteProject(int id)
+        [HttpPost]
+        public IActionResult Edit(Project project)
         {
-            throw new NotImplementedException();
+            if (ModelState.IsValid)
+            {
+                _projectService.UpdateProject(project);
+
+                return RedirectToAction("GetProjects", "Project");
+            }
+
+            return View(project);
         }
 
-        public IEnumerable<ProjectDto> GetAllProjects()
+        public IActionResult Delete(int id)
         {
-            throw new NotImplementedException();
+            _projectService.DeleteProject(id);
+            return RedirectToAction("GetProjects", "Project");
         }
-
-        public ProjectDto GetProjectById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateProject(ProjectDto projectDto)
-        {
-            throw new NotImplementedException();
-        }
-    }*/
+    }
 }
