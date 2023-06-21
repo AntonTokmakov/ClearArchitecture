@@ -1,0 +1,17 @@
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.csproj.AssemblyReference.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.AssemblyInfoInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.AssemblyInfo.cs
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.csproj.CoreCompileInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectPersistance.deps.json
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectPersistance.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectPersistance.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectApplication.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectDomain.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectApplication.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\bin\Debug\net6.0\ProjectDomain.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.csproj.CopyComplete
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\refint\ProjectPersistance.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ProjectPersistance.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectPersistance\obj\Debug\net6.0\ref\ProjectPersistance.dll

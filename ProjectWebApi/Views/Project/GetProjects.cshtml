@@ -1,0 +1,26 @@
+﻿@using Tasks.Models;
+@model IEnumerable<Project>
+
+<h2>Projects</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Start Date</th>
+            <th>End Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var projectDto in Model)
+        {
+            <tr>
+                <td>@projectDto.project_name</td>
+                <td>@projectDto.id_ts</td>
+                <td>@projectDto.short_name</td>
+                <td>@projectDto.id_status</td>
+            </tr>
+        }
+    </tbody>
+</table>

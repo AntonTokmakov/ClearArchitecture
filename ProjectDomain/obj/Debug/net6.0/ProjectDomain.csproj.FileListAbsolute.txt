@@ -1,0 +1,12 @@
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.csproj.AssemblyReference.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.AssemblyInfoInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.AssemblyInfo.cs
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.csproj.CoreCompileInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\bin\Debug\net6.0\ProjectDomain.deps.json
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\bin\Debug\net6.0\ProjectDomain.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\bin\Debug\net6.0\ProjectDomain.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\refint\ProjectDomain.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ProjectDomain.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectDomain\obj\Debug\net6.0\ref\ProjectDomain.dll

@@ -1,0 +1,15 @@
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.csproj.AssemblyReference.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.AssemblyInfoInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.AssemblyInfo.cs
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.csproj.CoreCompileInputs.cache
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\bin\Debug\net6.0\ProjectApplication.deps.json
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\bin\Debug\net6.0\ProjectApplication.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\bin\Debug\net6.0\ProjectApplication.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\bin\Debug\net6.0\ProjectDomain.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\bin\Debug\net6.0\ProjectDomain.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.csproj.CopyComplete
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\refint\ProjectApplication.dll
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ProjectApplication.pdb
+C:\Users\Anton\source\repos\ProjectManagement\ProjectApplication\obj\Debug\net6.0\ref\ProjectApplication.dll
