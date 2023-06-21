@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Xml;
 using Tasks.Models;
 using TrialProject.Models;
 
@@ -27,6 +28,18 @@ namespace Tasks.Controllers.Repositories
                 .HasNoKey();
             modelBuilder.Entity<TaskAssigments>()
                 .HasNoKey();
+            modelBuilder
+                .Entity<TechnicalSpecification>()
+                .Property(e => e.start_date)
+                .HasConversion(
+                    v => v.ToUniversalTime(),
+                    v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
+            modelBuilder
+                .Entity<TechnicalSpecification>()
+                .Property(e => e.end_date)
+                .HasConversion(
+                    v => v.ToUniversalTime(),
+                    v => DateTime.SpecifyKind(v, DateTimeKind.Utc));
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TrialProject.Models;
 using TrialProject.UseCase;
 
 namespace Tasks.Models
@@ -12,11 +14,23 @@ namespace Tasks.Models
             this._projectService = projectService;
         }
 
+        [HttpGet]
+        public IActionResult AddProject()
+        {
+            Project project = new Project();
+            if (TempData["create_id_ts"] != null) { project.id_ts = (int)TempData["create_id_ts"]; }
+            return View(project);
+        }
+
         [HttpPost]
         public IActionResult AddProject(Project project)
         {
-            _projectService.AddProject(project);
-            return View();
+            if (ModelState.IsValid)
+            {
+                _projectService.AddProject(project);
+                //return RedirectToAction("Index");
+            }
+            return View(project);
         }
 
         public IActionResult GetProjects()

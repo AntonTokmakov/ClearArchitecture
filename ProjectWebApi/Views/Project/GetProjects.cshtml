@@ -1,25 +1,25 @@
 ﻿@using Tasks.Models;
 @model IEnumerable<Project>
 
-<h2>Projects</h2>
+<h2>Все проекты</h2>
 
 <table class="table">
     <thead>
         <tr>
-            <th>Name</th>
-            <th>Description</th>
-            <th>Start Date</th>
-            <th>End Date</th>
+            <th>Наименование проекта</th>
+            <th>Краткое наименование</th>
+            <th>№ ТЗ проекта</th>
+            <th>Статус проекта</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var projectDto in Model)
+        @foreach (var project in Model)
         {
             <tr>
-                <td>@projectDto.project_name</td>
-                <td>@projectDto.id_ts</td>
-                <td>@projectDto.short_name</td>
-                <td>@projectDto.id_status</td>
+                <td>@project.project_name</td>
+                <td>@project.short_name</td>
+                <td># @project.id_ts</td>
+                <td>@project.id_status</td>
             </tr>
         }
     </tbody>

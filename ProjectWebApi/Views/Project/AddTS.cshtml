@@ -1,0 +1,35 @@
+﻿@using TrialProject.Models;
+@model TechnicalSpecification
+
+@{
+    ViewBag.Title = "Добавить техническую спецификацию";
+}
+
+<h2>@ViewBag.Title</h2>
+
+@using (Html.BeginForm("AddTS", "TechnicalSpecification", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.link_storage_ts, htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.link_storage_ts, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.link_storage_ts, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.start_date, htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.start_date, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.start_date, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(model => model.end_date, htmlAttributes: new { @class = "control-label" })
+        @Html.EditorFor(model => model.end_date, new { htmlAttributes = new { @class = "form-control" } })
+        @Html.ValidationMessageFor(model => model.end_date, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Добавить" class="btn btn-primary" />
+    </div>
+}
