@@ -24,6 +24,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Anton/source/repos/ProjectManagement/ProjectWebApi/Views/ProjectAndTask/InfoProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdEFuZFRhc2tcSW5mb1Byb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Anton/source/repos/ProjectManagement/ProjectWebApi/Views/Project/AddProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRQcm9qZWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,10 +42,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Anton/source/repos/ProjectManagement/ProjectWebApi/Views/Project/GetProjects.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxHZXRQcm9qZWN0cy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Anton/source/repos/ProjectManagement/ProjectWebApi/Views/Project/InfoProject.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxJbmZvUHJvamVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Anton/source/repos/ProjectManagement/ProjectWebApi/Views/Shared/Error.cshtml]

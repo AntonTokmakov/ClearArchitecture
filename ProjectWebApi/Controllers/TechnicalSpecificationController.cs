@@ -7,22 +7,22 @@ namespace ProjectWebApi.Controllers
 {
     public class TechnicalSpecificationController : Controller
     {
-        private readonly IServices _technicalSpecificationServices;
+        private readonly IService<TechnicalSpecification> _technicalSpecificationServices;
 
-        public TechnicalSpecificationController(IServices technicalSpecificationServices)
+        public TechnicalSpecificationController(IService<TechnicalSpecification> technicalSpecificationServices)
         {
             _technicalSpecificationServices = technicalSpecificationServices;
         }
 
         public ActionResult GetAllTS()
         {
-            var technicalSpecifications = _technicalSpecificationServices.GetTS();
+            var technicalSpecifications = _technicalSpecificationServices.GetItems();
             return View(technicalSpecifications);
         }
 
         public ActionResult GetTSItem(int id)
         {
-            var technicalSpecification = _technicalSpecificationServices.GetTSItem(id);
+            var technicalSpecification = _technicalSpecificationServices.GetById(id);
             return View(technicalSpecification);
         }
 
@@ -38,7 +38,7 @@ namespace ProjectWebApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                _technicalSpecificationServices.AddTS(technicalSpecification);
+                _technicalSpecificationServices.Create(technicalSpecification);
                 TempData["create_id_ts"] = technicalSpecification.id_ts;
                 //return Redirect(Request.Headers["Referer"].ToString());
                 return RedirectToAction("AddProject", "Project");
@@ -49,7 +49,7 @@ namespace ProjectWebApi.Controllers
 
         public ActionResult Edit(int id)
         {
-            var technicalSpecification = _technicalSpecificationServices.GetTSItem(id);
+            var technicalSpecification = _technicalSpecificationServices.GetById(id);
             return View(technicalSpecification);
         }
 
@@ -58,7 +58,7 @@ namespace ProjectWebApi.Controllers
         {
             if (ModelState.IsValid)
             {
-                _technicalSpecificationServices.UpdateTS(technicalSpecification);
+                _technicalSpecificationServices.Update(technicalSpecification);
                 return RedirectToAction("Index");
             }
 
@@ -67,14 +67,14 @@ namespace ProjectWebApi.Controllers
 
         public ActionResult Delete(int id)
         {
-            var technicalSpecification = _technicalSpecificationServices.GetTSItem(id);
+            var technicalSpecification = _technicalSpecificationServices.GetById(id);
             return View(technicalSpecification);
         }
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
-            _technicalSpecificationServices.DeleteTS(id);
+            _technicalSpecificationServices.Delete(id);
             return RedirectToAction("Index");
         }
 

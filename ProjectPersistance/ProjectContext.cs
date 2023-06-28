@@ -12,7 +12,7 @@ namespace Tasks.Controllers.Repositories
 
 
         public DbSet<Project> project { get; set; }
-        public DbSet<TasksProject> task { get; set; }
+        public DbSet<TasksProject> tasks { get; set; }
         public DbSet<Teacher> teacher { get; set; }
         public DbSet<TechnicalSpecification> technical_specifications { get; set; }
         public DbSet<Student> student { get; set; }

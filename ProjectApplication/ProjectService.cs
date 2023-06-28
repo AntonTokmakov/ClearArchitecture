@@ -1,9 +1,10 @@
-﻿using Tasks.Controllers.Repositories;
+﻿using ProjectApplication.Interface;
+using Tasks.Controllers.Repositories;
 using Tasks.Models;
 
 namespace TrialProject.UseCase
 {
-    public class ProjectService : IProjectService
+    public class ProjectService : IService<Project>
     {
         private readonly IRepository<Project> repository;
 
@@ -12,29 +13,29 @@ namespace TrialProject.UseCase
             this.repository = repository;
         }
 
-        public void AddProject(Project project)
+        public void Create(Project project)
         {
             repository.Create(project);
             repository.Save();
         }
 
-        public void DeleteProject(int id)
+        public void Delete(int id)
         {
             repository.Delete(id);
             repository.Save();
         }
 
-        public Project GetProjectById(int id)
+        public Project GetById(int id)
         {
             return repository.GetItem(id);
         }
 
-        public IEnumerable<Project> GetProjects()
+        public IEnumerable<Project> GetItems()
         {
             return repository.GetItemList();
         }
 
-        public void UpdateProject(Project project)
+        public void Update(Project project)
         {
             repository.Update(project);
             repository.Save();

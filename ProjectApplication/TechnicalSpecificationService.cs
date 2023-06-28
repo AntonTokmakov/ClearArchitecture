@@ -9,7 +9,7 @@ using TrialProject.Models;
 
 namespace ProjectApplication
 {
-     public class TechnicalSpecificationService : IServices
+     public class TechnicalSpecificationService : IService<TechnicalSpecification>
     {
         private readonly IRepository<TechnicalSpecification> _repository;
 
@@ -18,29 +18,29 @@ namespace ProjectApplication
             this._repository = _repository;
         }
 
-        public void AddTS(TechnicalSpecification project)
+        public void Create(TechnicalSpecification project)
         {
             _repository.Create(project);
             _repository.Save();
         }
 
-        public void DeleteTS(int id)
+        public void Delete(int id)
         {
             _repository.Delete(id);
             _repository.Save();
         }
 
-        public TechnicalSpecification GetTSItem(int id)
+        public TechnicalSpecification GetById(int id)
         {
             return _repository.GetItem(id);
         }
 
-        public IEnumerable<TechnicalSpecification> GetTS()
+        public IEnumerable<TechnicalSpecification> GetItems()
         {
             return _repository.GetItemList();
         }
 
-        public void UpdateTS(TechnicalSpecification project)
+        public void Update(TechnicalSpecification project)
         {
             _repository.Update(project);
             _repository.Save();

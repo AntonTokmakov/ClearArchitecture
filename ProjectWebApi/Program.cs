@@ -7,6 +7,9 @@ using ProjectApplication.Interface;
 using ProjectApplication;
 using TrialProject.Models;
 using TrialProject.Controllers.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+using ProjectDomain;
+using ProjectPersistance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,8 +25,9 @@ builder.Services.AddDbContext<ProjectContext>(options =>
 builder.Services.AddScoped<IRepository<Project>, SQLProjectRepository>();
 builder.Services.AddScoped<IRepository<TasksProject>, SQLTaskProject>();
 builder.Services.AddScoped<IRepository<TechnicalSpecification>, SQLTechnicalSpecification>();
-builder.Services.AddScoped<IServices, TechnicalSpecificationService>();
-builder.Services.AddScoped<IProjectService, ProjectService>();
+builder.Services.AddScoped<IService<TechnicalSpecification>, TechnicalSpecificationService>();
+builder.Services.AddScoped<IService<Project>, ProjectService>();
+builder.Services.AddScoped<IProjectAndTaskRepository, SQLProjectAndTask>();
 
 var app = builder.Build();
 

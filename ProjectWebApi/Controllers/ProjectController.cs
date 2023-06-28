@@ -10,9 +10,9 @@ namespace Tasks.Models
 {
     public class ProjectController : Controller
     {
-        IProjectService _projectService;
+        IService<Project> _projectService;
 
-        public ProjectController(IProjectService projectService)
+        public ProjectController(IService<Project> projectService)
         {
             this._projectService = projectService;
         }
@@ -30,7 +30,7 @@ namespace Tasks.Models
         {
             if (ModelState.IsValid)
             {
-                _projectService.AddProject(project);
+                _projectService.Create(project);
                 return RedirectToAction("GetProjects");
             }
             return View(project);
@@ -38,19 +38,19 @@ namespace Tasks.Models
 
         public IActionResult GetProjects()
         {
-            return View(_projectService.GetProjects());
+            return View(_projectService.GetItems());
         }
 
         public IActionResult Edit(int id)
         {
-            var project = _projectService.GetProjectById(id);
+            var project = _projectService.GetById(id);
 
             if (project == null)
             {
                 return NotFound();
             }
 
-            return View("AddProject", project);
+            return View("Edit", project);
         }
 
         [HttpPost]
@@ -58,7 +58,7 @@ namespace Tasks.Models
         {
             if (ModelState.IsValid)
             {
-                _projectService.UpdateProject(project);
+                _projectService.Update(project);
 
                 return RedirectToAction("GetProjects", "Project");
             }
@@ -68,22 +68,8 @@ namespace Tasks.Models
 
         public IActionResult Delete(int id)
         {
-            _projectService.DeleteProject(id);
+            _projectService.Delete(id);
             return RedirectToAction("GetProjects", "Project");
-        }
-
-        public IActionResult InfoProject(int id)
-        {
-            Project project = _projectService.GetProjectById(id);
-            
-            /*ProjectAndTask projectAndTask = new ProjectAndTask
-            {
-                Project = project,
-                Tasks = 
-
-            }*/
-            if (project == null) { return NotFound(); }
-            return View(project);
         }
     }
 }

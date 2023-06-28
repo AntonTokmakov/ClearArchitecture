@@ -9,8 +9,8 @@ namespace ProjectWebApi.Controllers
 {
     public class TaskController : Controller
     {
-        ITaskService _taskService;
-        public TaskController(ITaskService _taskService) 
+        IService<TasksProject> _taskService;
+        public TaskController(IService<TasksProject> _taskService) 
         { 
             this._taskService = _taskService;
         }
@@ -29,8 +29,8 @@ namespace ProjectWebApi.Controllers
 
         public List<TasksProject> GetTasks(int id)
         {
-            IEnumerable<TasksProject> tasks = _taskService.GetTasks();
-            List<TasksProject> tasksProject = tasks.Where(t => t.IdProject == id).ToList();
+            IEnumerable<TasksProject> tasks = _taskService.GetItems();
+            List<TasksProject> tasksProject = tasks.Where(t => t.id_project == id).ToList();
             return tasksProject;
         }
 

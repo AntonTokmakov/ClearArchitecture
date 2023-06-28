@@ -12,26 +12,26 @@ public class SQLTaskProject : IRepository<TasksProject>
 
     public void Create(TasksProject task)
     {
-        db.task.Add(task);
+        db.tasks.Add(task);
     }
 
     public void Delete(int id)
     {
-        TasksProject task = db.task.Find(id);
+        TasksProject task = db.tasks.Find(id);
         if (task != null)
         {
-            db.task.Remove(task);
+            db.tasks.Remove(task);
         }
     }
 
     public TasksProject GetItem(int id)
     {
-        return db.task.Find(id);
+        return db.tasks.Find(id);
     }
 
     public IEnumerable<TasksProject> GetItemList()
     {
-        return db.task;
+        return db.tasks;
     }
 
     public void Save()
@@ -41,6 +41,6 @@ public class SQLTaskProject : IRepository<TasksProject>
 
     public void Update(TasksProject task)
     {
-        db.task.Update(task);
+        db.tasks.Update(task);
     }
 }

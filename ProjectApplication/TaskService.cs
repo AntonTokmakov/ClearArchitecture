@@ -1,40 +1,41 @@
 ﻿using ProjectApplication.Interface;
 using Tasks.Controllers.Repositories;
+using TrialProject.Models;
 
 namespace ProjectApplication
 {
-    public class TaskService : ITaskService
+    public class TaskService : IService<TasksProject>
     {
-        IRepository<Task> repository;
+        IRepository<TasksProject> repository;
 
-        public TaskService(IRepository<Task> repository) 
+        public TaskService(IRepository<TasksProject> repository) 
         {
             this.repository = repository;
         }
 
-        public void AddTask(Task task)
+        public void Create(TasksProject task)
         {
             repository.Create(task);
             repository.Save();
         }
 
-        public void DeleteTask(int id)
+        public void Delete(int id)
         {
             repository.Delete(id);
             repository.Save();
         }
 
-        public Task GetTaskById(int id)
+        public TasksProject GetById(int id)
         {
             return repository.GetItem(id);
         }
 
-        public IEnumerable<Task> GetTasks()
+        public IEnumerable<TasksProject> GetItems()
         {
             return repository.GetItemList();
         }
 
-        public void UpdateTask(Task task )
+        public void Update(TasksProject task )
         {
             repository.Update(task);
             repository.Save();

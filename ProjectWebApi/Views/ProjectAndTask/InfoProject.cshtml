@@ -1,0 +1,57 @@
+﻿@using ProjectDomain;
+@using Tasks.Models;
+@model ProjectAndTask
+
+<h2>Просмотр проекта</h2>
+
+<div class="form-horizontal">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.project_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.project_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.id_ts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.id_ts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.short_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.short_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Project.id_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Project.id_status)
+        </dd>
+    </dl>
+    <ul>
+        @foreach (var task in Model.Tasks)
+        {
+            <tr>
+                <li>
+                    <td>@task.task_name. </td>
+                    <td>@task.task_description</td>
+                </li>
+            </tr>
+        }
+    </ul>
+    <div>
+        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Project.id_project }) |
+        @Html.ActionLink("Назад", "GetProjects", "Project")
+    </div>
+</div>

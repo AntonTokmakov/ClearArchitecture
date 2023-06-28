@@ -10,23 +10,25 @@ namespace TrialProject.Models
     {
         public int id_task { get; set; }
         [Display(Name = "Наименование задачи")]
-        public string Name { get; set; }
+        public string task_name { get; set; }
         [Display(Name = "Описание задачи")]
-        public string Description { get; set; }
+        public string task_description { get; set; }
         [Display(Name = "Сложность задачи")]
-        public string Complexity { get; set; }
-        [Display(Name = "Дата начала")]
-        public string StartDate { get; set; }
+        public int id_complexity_task { get; set; }
+        /*[Display(Name = "Дата начала")]
+        public string start_date { get; set; }
         [Display(Name = "Дата окончания")]
-        public string EndDate { get; set; }
-        public int IdProject { get; set; }
+        public string end_date { get; set; }*/
+        public int id_project { get; set; }
         [Display(Name = "Создавший студент")]
-        public string CreatStudent { get; set; }
-        public int Parent { get; set; }
-        public int Child { get; set; }
+        public int id_student { get; set; }
+        public int? parent { get; set; }
+        public int? child { get; set; }
         [Display(Name = "Видимость задачи")]
-        public bool Visible { get; set; }
-        [Display(Name = "Студенты отвественные за задачу")]
-        public Student[] Students { get; set; }
+        public bool visible { get; set; }
+        [Display(Name = "Статус задачи")]
+        public int id_status { get; set; }
+        /*[Display(Name = "Реальная дата окончания")]
+        public string actual_end_date { get; set; }*/
     }
 }
