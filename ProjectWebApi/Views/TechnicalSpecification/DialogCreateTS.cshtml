@@ -1,0 +1,33 @@
+﻿@page
+@model ProjectWebApi.Views.Project.DialogCreateTSModel
+@{
+}
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Добавление новой информации</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="inputName">Название</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Введите название">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputDescription">Описание</label>
+                        <textarea class="form-control" id="inputDescription" rows="3" placeholder="Введите описание"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary">Добавить</button>
+            </div>
+        </div>
+    </div>
+</div>

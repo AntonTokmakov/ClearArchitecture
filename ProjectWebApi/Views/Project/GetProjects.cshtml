@@ -22,8 +22,8 @@
                 <td># @project.id_ts</td>
                 <td>@project.id_status</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@project.id_project">Изменить</a> |
-                    <a asp-action="Delete" asp-route-id="@project.id_project">Удалить</a>
+                    <a asp-controller="Project" asp-action="Edit" asp-route-id="@project.id_project">Изменить</a> |
+                    <a asp-controller="Project" asp-action="Delete" asp-route-id="@project.id_project">Удалить</a>
                 </td>
             </tr>
         }

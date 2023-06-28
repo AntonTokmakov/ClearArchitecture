@@ -28,7 +28,6 @@ namespace Tasks.Models
             if (ModelState.IsValid)
             {
                 _projectService.AddProject(project);
-                //return RedirectToAction("Index");
                 return RedirectToAction("GetProjects");
             }
             return View(project);
@@ -48,7 +47,7 @@ namespace Tasks.Models
                 return NotFound();
             }
 
-            return View(project);
+            return View("AddProject", project);
         }
 
         [HttpPost]

@@ -11,13 +11,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentatio
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{72FFCB76-21FF-4481-8881-BCD89312DB00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectDomain", "ProjectDomain\ProjectDomain.csproj", "{7B93EE5D-6F96-45AA-AAAA-994986E1ED11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectDomain", "ProjectDomain\ProjectDomain.csproj", "{7B93EE5D-6F96-45AA-AAAA-994986E1ED11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectApplication", "ProjectApplication\ProjectApplication.csproj", "{FD49965F-D9DF-49CF-9D6C-6569C2406651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectApplication", "ProjectApplication\ProjectApplication.csproj", "{FD49965F-D9DF-49CF-9D6C-6569C2406651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectPersistance", "ProjectPersistance\ProjectPersistance.csproj", "{0765D43A-42C9-413C-B558-E16C92917F37}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectPersistance", "ProjectPersistance\ProjectPersistance.csproj", "{0765D43A-42C9-413C-B558-E16C92917F37}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectWebApi", "ProjectWebApi\ProjectWebApi.csproj", "{2C46310B-D09F-4766-898A-BC8695362096}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectWebApi", "ProjectWebApi\ProjectWebApi.csproj", "{2C46310B-D09F-4766-898A-BC8695362096}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
