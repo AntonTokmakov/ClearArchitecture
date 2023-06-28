@@ -22,7 +22,7 @@ builder.Services.AddDbContext<ProjectContext>(options =>
 builder.Services.AddScoped<IRepository<Project>, SQLProjectRepository>();
 builder.Services.AddScoped<IRepository<TasksProject>, SQLTaskProject>();
 builder.Services.AddScoped<IRepository<TechnicalSpecification>, SQLTechnicalSpecification>();
-builder.Services.AddScoped<ITechnicalSpecificationServices, TechnicalSpecificationService>();
+builder.Services.AddScoped<IServices, TechnicalSpecificationService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
 
 var app = builder.Build();

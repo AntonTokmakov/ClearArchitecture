@@ -8,7 +8,7 @@ using TrialProject.Models;
 
 namespace ProjectApplication.Interface
 {
-    public interface ITechnicalSpecificationServices
+    public interface IServices
     {
         void AddTS(TechnicalSpecification project);
         void UpdateTS(TechnicalSpecification project);

@@ -9,7 +9,7 @@ using TrialProject.Models;
 
 namespace ProjectApplication
 {
-     public class TechnicalSpecificationService : ITechnicalSpecificationServices
+     public class TechnicalSpecificationService : IServices
     {
         private readonly IRepository<TechnicalSpecification> _repository;
 

@@ -7,9 +7,9 @@ namespace ProjectWebApi.Controllers
 {
     public class TechnicalSpecificationController : Controller
     {
-        private readonly ITechnicalSpecificationServices _technicalSpecificationServices;
+        private readonly IServices _technicalSpecificationServices;
 
-        public TechnicalSpecificationController(ITechnicalSpecificationServices technicalSpecificationServices)
+        public TechnicalSpecificationController(IServices technicalSpecificationServices)
         {
             _technicalSpecificationServices = technicalSpecificationServices;
         }

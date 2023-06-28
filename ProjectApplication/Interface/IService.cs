@@ -11,8 +11,8 @@ namespace ProjectApplication.Interface
     {
         void Create(T item);
         void Update(T item);
-        Project GetById(int id);
-        IEnumerable<Project> GetItems();
+        T GetById(int id);
+        IEnumerable<T> GetItems();
         void Delete(int id);
     }
 }
