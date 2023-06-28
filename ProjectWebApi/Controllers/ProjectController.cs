@@ -76,12 +76,12 @@ namespace Tasks.Models
         {
             Project project = _projectService.GetProjectById(id);
             
-            ProjectAndTask projectAndTask = new ProjectAndTask
+            /*ProjectAndTask projectAndTask = new ProjectAndTask
             {
                 Project = project,
                 Tasks = 
 
-            }
+            }*/
             if (project == null) { return NotFound(); }
             return View(project);
         }
