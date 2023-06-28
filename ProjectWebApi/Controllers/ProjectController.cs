@@ -1,5 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using ProjectApplication.Interface;
+using ProjectDomain;
+using ProjectWebApi.Controllers;
 using TrialProject.Models;
 using TrialProject.UseCase;
 
@@ -67,6 +70,20 @@ namespace Tasks.Models
         {
             _projectService.DeleteProject(id);
             return RedirectToAction("GetProjects", "Project");
+        }
+
+        public IActionResult InfoProject(int id)
+        {
+            Project project = _projectService.GetProjectById(id);
+            
+            ProjectAndTask projectAndTask = new ProjectAndTask
+            {
+                Project = project,
+                Tasks = 
+
+            }
+            if (project == null) { return NotFound(); }
+            return View(project);
         }
     }
 }

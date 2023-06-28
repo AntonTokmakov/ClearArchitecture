@@ -20,7 +20,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ProjectContext>(options =>
     options.UseNpgsql(_configuration.GetConnectionString("ConnectionDB")));
 builder.Services.AddScoped<IRepository<Project>, SQLProjectRepository>();
-//builder.Services.AddScoped<ITechnicalSpecificationServices, TechnicalSpecificationService>();
+builder.Services.AddScoped<IRepository<TasksProject>, SQLTaskProject>();
 builder.Services.AddScoped<IRepository<TechnicalSpecification>, SQLTechnicalSpecification>();
 builder.Services.AddScoped<ITechnicalSpecificationServices, TechnicalSpecificationService>();
 builder.Services.AddScoped<IProjectService, ProjectService>();
