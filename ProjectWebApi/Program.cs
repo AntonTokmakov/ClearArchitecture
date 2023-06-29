@@ -28,6 +28,7 @@ builder.Services.AddScoped<IRepository<TechnicalSpecification>, SQLTechnicalSpec
 builder.Services.AddScoped<IService<TechnicalSpecification>, TechnicalSpecificationService>();
 builder.Services.AddScoped<IService<Project>, ProjectService>();
 builder.Services.AddScoped<IProjectAndTaskRepository, SQLProjectAndTask>();
+builder.Services.AddScoped<IService<TasksProject>, TaskService>();
 
 var app = builder.Build();
 

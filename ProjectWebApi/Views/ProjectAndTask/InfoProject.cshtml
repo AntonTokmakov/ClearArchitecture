@@ -39,19 +39,29 @@
             @Html.DisplayFor(model => model.Project.id_status)
         </dd>
     </dl>
-    <ul>
-        @foreach (var task in Model.Tasks)
-        {
+
+    <h3>Задачи проекта</h3>
+    <table class="table">
+        <thead>
             <tr>
-                <li>
-                    <td>@task.task_name. </td>
-                    <td>@task.task_description</td>
-                </li>
+                <th>Наименование задачи</th>
+                <th>Описание задачи</th>
             </tr>
-        }
-    </ul>
+        </thead>
+
+        <tbody>
+            @foreach (var task in Model.Tasks)
+            {
+                <tr>
+                    <td>@task.task_name </td>
+                    <td>@task.task_description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
     <div>
-        @Html.ActionLink("Редактировать", "Edit", new { id = Model.Project.id_project }) |
+        @Html.ActionLink("Добавить задачу", "Create", "Task", new { id = Model.Project.id_project }) |
+        @Html.ActionLink("Редактировать", "Edit", "Project", new { id = Model.Project.id_project }) |
         @Html.ActionLink("Назад", "GetProjects", "Project")
     </div>
 </div>

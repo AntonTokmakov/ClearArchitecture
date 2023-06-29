@@ -3,57 +3,48 @@
 
 <h2>Создание задачи</h2>
 
-@using (Html.BeginForm("Create", "TasksProject", FormMethod.Post))
-{
-    @Html.AntiForgeryToken()
-
+<form asp-action="Create">
+    
     <div class="form-group">
-        @Html.LabelFor(model => model.task_name, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.task_name, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.task_name, "", new { @class = "text-danger" })
-        </div>
+        <label asp-for="id_project" class="control-label"></label>
+        <input asp-for="id_project" class="form-control" />
+        <span asp-validation-for="id_project" class="text-danger"></span>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.task_description, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.task_description, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.task_description, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    /*<div class="form-group">
-        @Html.LabelFor(model => model.start_date, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.start_date, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.start_date, "", new { @class = "text-danger" })
-        </div>
+        <label asp-for="task_name" class="control-label"></label>
+        <input asp-for="task_name" class="form-control" />
+        <span asp-validation-for="task_name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.end_date, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.end_date, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.end_date, "", new { @class = "text-danger" })
-        </div>
-    </div>*/
-    <div class="form-group">
-        @Html.LabelFor(model => model.id_student, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.id_student, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.id_student, "", new { @class = "text-danger" })
-        </div>
+        <label asp-for="task_description" class="control-label"></label>
+        <input asp-for="task_description" class="form-control" />
+        <span asp-validation-for="task_description" class="text-danger"></span>
     </div>
     <div class="form-group">
-        @Html.LabelFor(model => model.visible, htmlAttributes: new { @class = "control-label col-md-2" })
-        <div class="col-md-10">
-            @Html.EditorFor(model => model.visible, new { htmlAttributes = new { @class = "form-control" } })
-            @Html.ValidationMessageFor(model => model.visible, "", new { @class = "text-danger" })
-        </div>
+        <label asp-for="id_complexity_task" class="control-label"></label>
+        <input asp-for="id_complexity_task" class="form-control" />
+        <span asp-validation-for="id_complexity_task" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <input type="submit" value="Создать" class="btn btn-primary" />
+        <label asp-for="id_student" class="control-label"></label>
+        <input asp-for="id_student" class="form-control" />
+        <span asp-validation-for="id_student" class="text-danger"></span>
     </div>
-}
+    <div class="form-group">
+        <label asp-for="visible" class="control-label"></label>
+        <input asp-for="visible" class="form-control" />
+        <span asp-validation-for="visible" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="id_status" class="control-label"></label>
+        <input asp-for="id_status" class="form-control" />
+        <span asp-validation-for="id_status" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input asp-area="" asp-action="Create" asp-controller="Task" type="submit" value="Создать" class="btn btn-primary" />
+    </div>
+</form>
 
 <div>
-    @Html.ActionLink("Назад", "GetProjects", "Project")
+    <a asp-action="GetProjects" asp-controller="Project" >Назад</a>
 </div>
